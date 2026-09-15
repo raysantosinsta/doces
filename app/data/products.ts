@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     description: "Caixa com 12 unidades sortidas: Ao leite, Ninho, Churros e Pistache.",
     price: 45.00,
     category: "Doces",
-    imageUrl: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: "p4",
