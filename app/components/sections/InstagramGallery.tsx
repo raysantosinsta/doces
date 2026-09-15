@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Section } from '../ui/Section';
 import { Button } from '../ui/Button';
@@ -7,7 +9,10 @@ export const InstagramGallery = () => {
   return (
     <Section className="bg-cream">
       <div className="text-center mb-12">
-        <h2 className="font-serif text-4xl text-chocolate mb-4">📸 Feito para adoçar seus momentos</h2>
+        <h2 className="font-serif text-4xl text-chocolate mb-4 flex items-center justify-center gap-3">
+          <Camera size={36} className="text-chocolate" />
+          Feito para adoçar seus momentos
+        </h2>
         <p className="font-sans text-chocolate-light">Acompanhe as novidades no nosso Instagram.</p>
       </div>
 
@@ -32,7 +37,11 @@ export const InstagramGallery = () => {
       </div>
 
       <div className="text-center">
-        <Button variant="outline" className="gap-2">
+        <Button 
+          variant="outline" 
+          className="gap-2"
+          onClick={() => window.open('https://www.instagram.com/yasminedantasdoceria?stkn=ZDNlZDc0MzIxNw==', '_blank')}
+        >
           <Camera size={20} />
           Ver Instagram
         </Button>

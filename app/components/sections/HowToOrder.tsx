@@ -1,6 +1,5 @@
-import React from 'react';
+import { Bike, HeartHandshake, MessageCircle, MousePointerClick, ShoppingBag } from 'lucide-react';
 import { Section } from '../ui/Section';
-import { MousePointerClick, ShoppingBag, MessageCircle, HeartHandshake } from 'lucide-react';
 
 export const HowToOrder = () => {
   const steps = [
@@ -13,12 +12,15 @@ export const HowToOrder = () => {
   return (
     <Section className="bg-cream-dark/50">
       <div className="text-center mb-12">
-        <h2 className="font-serif text-4xl text-chocolate mb-4">🛵 Peça em poucos passos</h2>
+        <h2 className="font-serif text-4xl text-chocolate mb-4 flex items-center justify-center gap-3">
+          <Bike size={36} className="text-chocolate" />
+          Peça em poucos passos
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto relative">
         <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-chocolate-light/20 z-0" />
-        
+
         {steps.map((step, idx) => (
           <div key={idx} className="flex flex-col items-center text-center relative z-10">
             <div className="w-24 h-24 rounded-full bg-cream shadow-md flex items-center justify-center text-chocolate mb-6 border border-gold/20">

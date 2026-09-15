@@ -1,10 +1,9 @@
 "use client";
 
-import React from 'react';
-import { Section } from '../ui/Section';
-import { Button } from '../ui/Button';
-import { MapPin, Motorbike, Store, Star } from 'lucide-react';
+import { Bike, MapPin, Motorbike, Star, Store, Smartphone } from 'lucide-react';
 import { useCartStore } from '../../store/useCartStore';
+import { Button } from '../ui/Button';
+import { Section } from '../ui/Section';
 
 const WHATSAPP_NUMBER = "5585996958917";
 
@@ -14,10 +13,13 @@ export const DeliveryInfo = () => {
   return (
     <Section className="bg-chocolate text-cream">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
+
         <div className="space-y-8">
           <div>
-            <h2 className="font-serif text-4xl mb-4 text-gold">🛵 Delivery ou retirada</h2>
+            <h2 className="font-serif text-4xl mb-4 text-gold flex items-center gap-3">
+              <Bike size={36} className="text-gold" />
+              Delivery ou retirada
+            </h2>
             <div className="flex items-center gap-2 text-cream-dark">
               <MapPin size={20} className="text-rose" />
               <span className="text-lg">Fortaleza - CE</span>
@@ -46,18 +48,24 @@ export const DeliveryInfo = () => {
             </div>
           </div>
 
-          <Button 
-            variant="secondary" 
+          <Button
+            variant="secondary"
             onClick={() => window.open(generateWhatsAppLink(WHATSAPP_NUMBER), '_blank')}
             className="w-full sm:w-auto mt-4"
           >
-            📲 Pedir pelo WhatsApp
+            <div className="flex items-center gap-2">
+              <Smartphone size={20} />
+              Pedir pelo WhatsApp
+            </div>
           </Button>
         </div>
 
         {/* Google Reviews Block */}
         <div className="bg-cream text-chocolate p-8 rounded-3xl text-center shadow-2xl mt-8 md:mt-0">
-          <h3 className="font-serif text-2xl mb-2">⭐ Sua experiência importa</h3>
+          <h3 className="font-serif text-2xl mb-2 flex items-center justify-center gap-2">
+            <Star className="text-gold" fill="currentColor" size={28} />
+            Sua experiência importa
+          </h3>
           <div className="flex justify-center gap-1 text-gold mb-6">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} size={28} fill="currentColor" />

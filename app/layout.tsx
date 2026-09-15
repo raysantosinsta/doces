@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Adoçando momentos inesquecíveis. Faça seu pedido pelo WhatsApp.",
 };
 
+import { CustomCursor } from "./components/ui/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
       <body className="font-sans bg-cream text-chocolate antialiased">
+        <CustomCursor />
         {children}
       </body>
     </html>
